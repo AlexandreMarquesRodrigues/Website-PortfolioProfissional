@@ -7,11 +7,17 @@
 }
 
 body{
-    background:#050816;
+    background:
+    radial-gradient(circle at top left,
+    rgba(139,92,246,.15),
+    transparent 35%),
+    radial-gradient(circle at bottom right,
+    rgba(59,130,246,.12),
+    transparent 35%),
+    #050816;
     color:white;
     overflow-x:hidden;
 }
-
 /* HEADER */
 
 header{
@@ -35,6 +41,10 @@ header{
     font-size:30px;
     font-weight:bold;
     color:#8b5cf6;
+}
+
+.logo span{
+    color:white;
 }
 
 nav{
@@ -226,16 +236,16 @@ section h2{
 
 .projeto{
     background:#111827;
-
+    border:1px solid rgba(255,255,255,.05);
     border-radius:20px;
-
     overflow:hidden;
-
     transition:.3s;
 }
 
 .projeto:hover{
     transform:translateY(-10px);
+    box-shadow:
+    0 0 25px rgba(139,92,246,.25);
 }
 
 .projeto img{
@@ -465,27 +475,37 @@ footer{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
-    gap:70px;
+    gap:40px;
     margin-top:50px;
 }
 
 .skill-item{
-    background:#111827;
-    padding:20px;
-    border-radius:15px;
-}
+    width:150px;
 
-.skill-item i{
-    font-size:70px;
-    margin-bottom:12px;
+    background:#111827;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
+
     transition:.3s;
 }
 
-.skill-item span{
-    display:block;
-    color:white;
-    font-size:18px;
-    font-weight:600;
+.skill-item:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 0 20px rgba(139,92,246,.25);
+}
+
+.skill-item i{
+    font-size:60px;
+    margin-bottom:12px;
+    transition:.3s;
 }
 
 .skill-item:hover i{
@@ -517,7 +537,7 @@ footer{
 }
 
 .hero-image img:hover{
-    transform:scale(1.03);
+    transform:scale(1.04);
 }
 
 .project-buttons{
@@ -551,4 +571,19 @@ footer{
 
 .project-buttons a:hover{
     transform:translateY(-3px);
+}
+
+.techs{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    padding:0 15px 15px;
+}
+
+.techs span{
+    background:#1e293b;
+    color:#8b5cf6;
+    padding:6px 12px;
+    border-radius:999px;
+    font-size:.85rem;
 }
